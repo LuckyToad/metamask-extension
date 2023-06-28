@@ -104,7 +104,7 @@ exports[`ConfirmAddSuggestedNFT Component should match snapshot 1`] = `
                 align="end"
                 class="mm-box mm-text mm-text--body-sm mm-text--font-weight-bold mm-box--color-text-default"
               >
-                0 ETH
+                &lt;0.000001 ETH
                  
               </h6>
             </div>
@@ -314,7 +314,7 @@ exports[`ConfirmAddSuggestedNFT Component should match snapshot 1`] = `
               align="end"
               class="mm-box mm-text mm-text--body-sm mm-text--font-weight-bold mm-box--color-text-default"
             >
-              0 ETH
+              &lt;0.000001 ETH
                
             </h6>
           </div>

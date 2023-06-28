@@ -295,6 +295,10 @@ describe('Confirm Transaction Base', () => {
         gasFeeIsCustom: true,
       },
     };
+
+    mockedStore.metamask.providerConfig.chainId = CHAIN_IDS.GOERLI;
+    mockedStore.confirmTransaction.txData.chainId = CHAIN_IDS.GOERLI;
+
     const store = configureMockStore(middleware)(newMockedStore);
     const sendTransaction = jest.fn().mockResolvedValue();
 
@@ -324,6 +328,7 @@ describe('Confirm Transaction Base', () => {
         txData: {
           ...mockedStore.confirmTransaction.txData,
           custodyStatus: true,
+          chainId: CHAIN_IDS.GOERLI,
         },
       },
       metamask: {
@@ -370,6 +375,9 @@ describe('Confirm Transaction Base', () => {
         gasFeeIsCustom: true,
       },
     };
+
+    mockedStore.metamask.providerConfig.chainId = CHAIN_IDS.GOERLI;
+
     const store = configureMockStore(middleware)(newMockedStore);
     const sendTransaction = jest
       .fn()
