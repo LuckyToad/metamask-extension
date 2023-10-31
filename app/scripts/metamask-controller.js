@@ -131,6 +131,7 @@ import {
   TransactionType,
 } from '@metamask/transaction-controller';
 
+import { BrowserRuntimePostMessageStream } from '@metamask/post-message-stream';
 ///: BEGIN:ONLY_INCLUDE_IN(build-mmi)
 import { toChecksumHexAddress } from '../../shared/modules/hexstring-utils';
 ///: END:ONLY_INCLUDE_IN
@@ -1114,6 +1115,15 @@ export default class MetamaskController extends EventEmitter {
       }),
       state: initState.SubjectMetadataController,
       subjectCacheLimit: 100,
+    });
+
+    this.runtimeStream = new BrowserRuntimePostMessageStream({
+      name: 'parent',
+      target: 'child',
+    });
+
+    this.runtimeStream.on('data', (data) => {
+      console.log('Service worker received data from offscreen document', data);
     });
 
     ///: BEGIN:ONLY_INCLUDE_IN(snaps)
