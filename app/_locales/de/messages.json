@@ -3505,9 +3505,6 @@
   "searchAccounts": {
     "message": "Konten durchsuchen"
   },
-  "searchResults": {
-    "message": "Suchergebnisse"
-  },
   "secretRecoveryPhrase": {
     "message": "Geheime Wiederherstellungsphrase"
   },

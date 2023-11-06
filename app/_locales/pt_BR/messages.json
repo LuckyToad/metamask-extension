@@ -1831,9 +1831,6 @@
   "searchAccounts": {
     "message": "Buscar contas"
   },
-  "searchResults": {
-    "message": "Resultados da busca"
-  },
   "secretRecoveryPhrase": {
     "message": "Frase de Recuperação Secreta"
   },

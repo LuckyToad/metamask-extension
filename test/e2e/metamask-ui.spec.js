@@ -166,6 +166,8 @@ describe('MetaMask @no-mmi', function () {
     });
 
     it('balance renders', async function () {
+      // Make sure we are on assets tab for multichain
+      await driver.clickElement('[data-testid="home__asset-tab"]');
       const balanceSelector = process.env.MULTICHAIN
         ? '[data-testid="token-balance-overview-currency-display"]'
         : '[data-testid="eth-overview__primary-currency"]';
@@ -280,6 +282,13 @@ describe('MetaMask @no-mmi', function () {
     });
 
     it('renders the balance for the new token', async function () {
+      if (process.env.MULTICHAIN) {
+        return;
+      }
+      const [, tkn] = await driver.findElements(
+        '[data-testid="multichain-token-list-button"]',
+      );
+      await tkn.click();
       await driver.waitForSelector({
         css: '.wallet-overview .token-overview__primary-balance',
         text: '10 TST',

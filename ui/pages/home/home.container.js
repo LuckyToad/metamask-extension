@@ -37,6 +37,7 @@ import {
   getSuggestedTokens,
   getSuggestedNfts,
   getApprovalFlows,
+  getNewTokensImportedError,
 } from '../../selectors';
 
 import {
@@ -54,6 +55,7 @@ import {
   setRemoveNftMessage,
   setNewTokensImported,
   setActiveNetwork,
+  setNewTokensImportedError,
 } from '../../store/actions';
 import { hideWhatsNewPopup } from '../../ducks/app/app';
 import { getWeb3ShimUsageAlertEnabledness } from '../../ducks/metamask/metamask';
@@ -160,6 +162,7 @@ const mapStateToProps = (state) => {
     newNftAddedMessage: getNewNftAddedMessage(state),
     removeNftMessage: getRemoveNftMessage(state),
     newTokensImported: getNewTokensImported(state),
+    newTokensImportedError: getNewTokensImportedError(state),
     newNetworkAddedConfigurationId: appState.newNetworkAddedConfigurationId,
     onboardedInThisUISession: appState.onboardedInThisUISession,
     ///: BEGIN:ONLY_INCLUDE_IN(build-mmi)
@@ -208,6 +211,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     setNewTokensImported: (newTokens) => {
       dispatch(setNewTokensImported(newTokens));
+    },
+    setNewTokensImportedError: (msg) => {
+      dispatch(setNewTokensImportedError(msg));
     },
     clearNewNetworkAdded: () => {
       dispatch(setNewNetworkAdded({}));
