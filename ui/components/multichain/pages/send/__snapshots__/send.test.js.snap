@@ -343,33 +343,6 @@ exports[`SendPage render renders correctly 1`] = `
                           x="0"
                           y="0"
                         >
-<<<<<<< HEAD
-                          <rect
-                            fill="#018E74"
-                            height="24"
-                            transform="translate(4.7349359116752 -4.0712104893809595) rotate(358.4 12 12)"
-                            width="24"
-                            x="0"
-                            y="0"
-                          />
-                          <rect
-                            fill="#18CAF2"
-                            height="24"
-                            transform="translate(5.764211673767176 -9.103779985257862) rotate(414.8 12 12)"
-                            width="24"
-                            x="0"
-                            y="0"
-                          />
-                          <rect
-                            fill="#C81474"
-                            height="24"
-                            transform="translate(-4.206681561377365 -18.81083347367672) rotate(322.3 12 12)"
-                            width="24"
-                            x="0"
-                            y="0"
-                          />
-                        </svg>
-=======
                           Test Ledger 1
                         </button>
                       </div>
@@ -391,204 +364,10 @@ exports[`SendPage render renders correctly 1`] = `
                             ETH
                           </span>
                         </div>
->>>>>>> 24eb94a659 (fix some UI alignment issues)
                       </div>
                     </div>
                   </div>
                   <div
-<<<<<<< HEAD
-                    class="mm-box multichain-account-list-item__content mm-box--display-flex mm-box--flex-direction-column"
-                  >
-                    <div
-                      class="mm-box mm-box--display-flex mm-box--flex-direction-column"
-                    >
-                      <div
-                        class="mm-box mm-box--display-flex mm-box--justify-content-space-between"
-                      >
-                        <div
-                          class="mm-box multichain-account-list-item__account-name mm-box--margin-inline-end-2"
-                        >
-                          <button
-                            class="mm-box mm-text multichain-account-list-item__account-name__button mm-text--body-md-medium mm-text--ellipsis mm-text--text-align-left mm-box--padding-0 mm-box--width-full mm-box--color-text-default mm-box--background-color-transparent"
-                          >
-                            Test Account 2
-                          </button>
-                        </div>
-                        <div
-                          class="mm-box mm-text multichain-account-list-item__asset mm-text--body-md mm-text--ellipsis mm-text--text-align-end mm-box--display-flex mm-box--flex-direction-row mm-box--justify-content-flex-end mm-box--align-items-center mm-box--color-text-default"
-                        >
-                          <div
-                            class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-                            title="0 ETH"
-                          >
-                            <span
-                              class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-default"
-                            >
-                              0
-                            </span>
-                            <span
-                              class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-default"
-                            >
-                              ETH
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="mm-box mm-box--display-flex mm-box--justify-content-space-between"
-                    >
-                      <div
-                        class="mm-box mm-box--display-flex mm-box--align-items-center"
-                      >
-                        <p
-                          class="mm-box mm-text mm-text--body-sm mm-box--color-text-alternative"
-                        >
-                          0xEC1Ad...9251B
-                        </p>
-                      </div>
-                      <div
-                        class="mm-box mm-text mm-text--body-sm mm-text--text-align-end mm-box--color-text-alternative"
-                      >
-                        <div
-                          class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-                          title="0 ETH"
-                        >
-                          <span
-                            class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-default"
-                          >
-                            0
-                          </span>
-                          <span
-                            class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-default"
-                          >
-                            ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="mm-box multichain-account-list-item mm-box--padding-4 mm-box--display-flex mm-box--background-color-transparent"
-                >
-                  <div
-                    class="mm-box mm-text mm-avatar-base mm-avatar-base--size-sm mm-avatar-account mm-text--body-sm mm-text--text-transform-uppercase mm-box--margin-inline-end-2 mm-box--display-flex mm-box--justify-content-center mm-box--align-items-center mm-box--color-text-default mm-box--background-color-background-alternative mm-box--rounded-full mm-box--border-color-transparent box--border-style-solid box--border-width-1"
-                  >
-                    <div
-                      class="mm-avatar-account__jazzicon"
-                    >
-                      <div
-                        style="border-radius: 50px; overflow: hidden; padding: 0px; margin: 0px; width: 24px; height: 24px; display: inline-block; background: rgb(249, 100, 1);"
-                      >
-                        <svg
-                          height="24"
-                          width="24"
-                          x="0"
-                          y="0"
-                        >
-                          <rect
-                            fill="#C81432"
-                            height="24"
-                            transform="translate(-0.437734499550198 -2.3279673774420457) rotate(331.7 12 12)"
-                            width="24"
-                            x="0"
-                            y="0"
-                          />
-                          <rect
-                            fill="#187AF2"
-                            height="24"
-                            transform="translate(-9.538226676234487 4.7487559567788775) rotate(160.5 12 12)"
-                            width="24"
-                            x="0"
-                            y="0"
-                          />
-                          <rect
-                            fill="#FB183E"
-                            height="24"
-                            transform="translate(21.501064667516403 -2.238176776691073) rotate(517.6 12 12)"
-                            width="24"
-                            x="0"
-                            y="0"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="mm-box multichain-account-list-item__content mm-box--display-flex mm-box--flex-direction-column"
-                  >
-                    <div
-                      class="mm-box mm-box--display-flex mm-box--flex-direction-column"
-                    >
-                      <div
-                        class="mm-box mm-box--display-flex mm-box--justify-content-space-between"
-                      >
-                        <div
-                          class="mm-box multichain-account-list-item__account-name mm-box--margin-inline-end-2"
-                        >
-                          <button
-                            class="mm-box mm-text multichain-account-list-item__account-name__button mm-text--body-md-medium mm-text--ellipsis mm-text--text-align-left mm-box--padding-0 mm-box--width-full mm-box--color-text-default mm-box--background-color-transparent"
-                          >
-                            Test Ledger 1
-                          </button>
-                        </div>
-                        <div
-                          class="mm-box mm-text multichain-account-list-item__asset mm-text--body-md mm-text--ellipsis mm-text--text-align-end mm-box--display-flex mm-box--flex-direction-row mm-box--justify-content-flex-end mm-box--align-items-center mm-box--color-text-default"
-                        >
-                          <div
-                            class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-                            title="0 ETH"
-                          >
-                            <span
-                              class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-default"
-                            >
-                              0
-                            </span>
-                            <span
-                              class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-default"
-                            >
-                              ETH
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="mm-box mm-box--display-flex mm-box--justify-content-space-between"
-                    >
-                      <div
-                        class="mm-box mm-box--display-flex mm-box--align-items-center"
-                      >
-                        <p
-                          class="mm-box mm-text mm-text--body-sm mm-box--color-text-alternative"
-                        >
-                          0xc42ED...D8813
-                        </p>
-                      </div>
-                      <div
-                        class="mm-box mm-text mm-text--body-sm mm-text--text-align-end mm-box--color-text-alternative"
-                      >
-                        <div
-                          class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-                          title="0 ETH"
-                        >
-                          <span
-                            class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-default"
-                          >
-                            0
-                          </span>
-                          <span
-                            class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-default"
-                          >
-                            ETH
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="mm-box mm-tag mm-box--padding-right-1 mm-box--padding-left-1 mm-box--display-inline-block mm-box--justify-content-center mm-box--align-items-center mm-box--background-color-background-default mm-box--rounded-pill mm-box--border-color-border-default mm-box--border-width-1 box--border-style-solid"
-=======
                     class="mm-box mm-box--display-flex mm-box--justify-content-space-between"
                   >
                     <div
@@ -931,21 +710,16 @@ exports[`SendPage render renders correctly 1`] = `
                     <div
                       class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
                       title="<0.000001 ETH"
->>>>>>> 24eb94a659 (fix some UI alignment issues)
                     >
                       <p
                         class="mm-box mm-text mm-text--body-xs mm-box--color-text-alternative"
                       >
-<<<<<<< HEAD
-                        Ledger
-=======
                         &lt;0.000001
                       </span>
                       <span
                         class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-default"
                       >
                         0xc42e...8813
->>>>>>> 24eb94a659 (fix some UI alignment issues)
                       </p>
                     </div>
                   </div>
@@ -1213,8 +987,94 @@ exports[`SendPage render renders correctly 1`] = `
         <button
           class="mm-box mm-text mm-button-base mm-button-base--size-lg mm-button-base--block mm-button-primary mm-text--body-md-medium mm-box--padding-0 mm-box--padding-right-4 mm-box--padding-left-4 mm-box--display-inline-flex mm-box--justify-content-center mm-box--align-items-center mm-box--color-primary-inverse mm-box--background-color-primary-default mm-box--rounded-pill"
         >
-          Continue
-        </button>
+          <div
+            class="mm-box asset-picker mm-box--padding-2 mm-box--display-flex mm-box--align-items-center mm-box--background-color-background-alternative mm-box--rounded-pill"
+          >
+            <div
+              class="mm-box mm-text mm-avatar-base mm-avatar-base--size-xs mm-avatar-token mm-text--body-xs mm-text--text-transform-uppercase mm-box--display-flex mm-box--justify-content-center mm-box--align-items-center mm-box--color-text-default mm-box--background-color-background-alternative mm-box--rounded-full mm-box--border-color-transparent box--border-style-solid box--border-width-1"
+            >
+              <img
+                alt="undefined logo"
+                class="mm-avatar-token__token-image"
+                src="./images/eth_logo.png"
+              />
+            </div>
+            <p
+              class="mm-box mm-text mm-text--body-xs mm-box--margin-right-auto mm-box--margin-left-auto mm-box--color-text-default"
+            >
+              ETH
+            </p>
+            <span
+              class="mm-box mm-icon mm-icon--size-xs mm-box--display-inline-block mm-box--color-inherit"
+              style="mask-image: url('./images/icons/arrow-down.svg');"
+            />
+          </div>
+          <div
+            class="unit-input asset-picker-amount__input"
+          >
+            <div
+              class="unit-input__inputs"
+            >
+              <div
+                class="unit-input__input-container"
+              >
+                <input
+                  class="unit-input__input"
+                  data-testid="currency-input"
+                  dir="ltr"
+                  placeholder="0"
+                  style="width: 1.5ch;"
+                  type="number"
+                  value="0"
+                />
+                <div
+                  class="unit-input__suffix"
+                >
+                  ETH
+                </div>
+              </div>
+              <div
+                class="currency-input__conversion-component"
+              >
+                No conversion rate available
+              </div>
+            </div>
+            <button
+              aria-label="Switch input currency"
+              class="mm-box mm-button-icon mm-button-icon--size-sm mm-box--display-inline-flex mm-box--justify-content-center mm-box--align-items-center mm-box--color-primary-default mm-box--background-color-transparent mm-box--rounded-lg"
+            >
+              <span
+                class="mm-box mm-icon mm-icon--size-sm mm-box--display-inline-block mm-box--color-inherit"
+                style="mask-image: url('./images/icons/swap-vertical.svg');"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          class="mm-box mm-box--display-flex"
+        >
+          <p
+            class="mm-box mm-text mm-text--body-md mm-box--margin-right-1 mm-box--color-text-alternative"
+          >
+            Balance
+            :
+          </p>
+          <div
+            class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
+            title="<0.000001 ETH"
+          >
+            <span
+              class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-alternative"
+            >
+              &lt;0.000001
+            </span>
+            <span
+              class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-alternative"
+            >
+              ETH
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </div>

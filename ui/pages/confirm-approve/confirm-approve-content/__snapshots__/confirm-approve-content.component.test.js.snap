@@ -32,16 +32,16 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
       data-testid="confirm-approve-title"
     >
       <span>
-
-        Allow access to and transfer of all your
+         
+        Allow access to and transfer of all your 
         <span
           class="confirm-approve-content__approval-asset-title"
         >
           ZenAcademy
         </span>
-
+        
         ?
-
+         
       </span>
     </div>
     <div
@@ -82,17 +82,6 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
           >
             Transaction fee
           </div>
-          <div
-            class="mm-box mm-box--width-1/6"
-          >
-            <a
-              class="button btn-link confirm-approve-content__small-blue-text"
-              role="button"
-              tabindex="0"
-            >
-              Edit
-            </a>
-          </div>
         </div>
         <div
           class="confirm-approve-content__card-content"
@@ -122,7 +111,7 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
           </div>
         </div>
         <div
-          class="box box--margin-bottom-4 box--flex-direction-row"
+          class="mm-box mm-box--margin-bottom-4"
         >
           <div
             class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
@@ -213,32 +202,32 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
       data-testid="confirm-approve-title"
     >
       <span>
-
-        Revoke permission to access and transfer all of your
+         
+        Revoke permission to access and transfer all of your 
         <span
           class="confirm-approve-content__approval-asset-title"
         >
           ZenAcademy
         </span>
-
+        
         ?
-
+         
       </span>
     </div>
     <div
       class="confirm-approve-content__description"
     >
       <span>
-
-        This revokes the permission for a third party to access and transfer all of your
+         
+        This revokes the permission for a third party to access and transfer all of your 
         <span
           class="confirm-approve-content__approval-asset-title"
         >
           ZenAcademy
         </span>
-
+        
          without further notice.
-
+         
       </span>
     </div>
     <div
@@ -274,17 +263,6 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
           >
             Transaction fee
           </div>
-          <div
-            class="mm-box mm-box--width-1/6"
-          >
-            <a
-              class="button btn-link confirm-approve-content__small-blue-text"
-              role="button"
-              tabindex="0"
-            >
-              Edit
-            </a>
-          </div>
         </div>
         <div
           class="confirm-approve-content__card-content"
@@ -314,7 +292,7 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
           </div>
         </div>
         <div
-          class="box box--margin-bottom-4 box--flex-direction-row"
+          class="mm-box mm-box--margin-bottom-4"
         >
           <div
             class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
@@ -405,32 +383,32 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
       data-testid="confirm-approve-title"
     >
       <span>
-
-        Allow access to and transfer all of your NFTs from
+         
+        Allow access to and transfer all of your NFTs from 
         <span
           class="confirm-approve-content__approval-asset-title"
         >
           this collection
         </span>
-
+        
         ?
-
+         
       </span>
     </div>
     <div
       class="confirm-approve-content__description"
     >
       <span>
-
-        This allows a third party to access and transfer all of your NFTs from
+         
+        This allows a third party to access and transfer all of your NFTs from 
         <span
           class="confirm-approve-content__approval-asset-title"
         >
           this collection
         </span>
-
+        
          without further notice until you revoke its access.
-
+         
       </span>
     </div>
     <div
@@ -466,17 +444,6 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
           >
             Transaction fee
           </div>
-          <div
-            class="mm-box mm-box--width-1/6"
-          >
-            <a
-              class="button btn-link confirm-approve-content__small-blue-text"
-              role="button"
-              tabindex="0"
-            >
-              Edit
-            </a>
-          </div>
         </div>
         <div
           class="confirm-approve-content__card-content"
@@ -506,7 +473,7 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
           </div>
         </div>
         <div
-          class="box box--margin-bottom-4 box--flex-direction-row"
+          class="mm-box mm-box--margin-bottom-4"
         >
           <div
             class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
@@ -597,32 +564,32 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
       data-testid="confirm-approve-title"
     >
       <span>
-
-        Revoke permission to access and transfer all of your NFTs from
+         
+        Revoke permission to access and transfer all of your NFTs from 
         <span
           class="confirm-approve-content__approval-asset-title"
         >
           this collection
         </span>
-
+        
         ?
-
+         
       </span>
     </div>
     <div
       class="confirm-approve-content__description"
     >
       <span>
-
-        This revokes the permission for a third party to access and transfer all of your NFTs from
+         
+        This revokes the permission for a third party to access and transfer all of your NFTs from 
         <span
           class="confirm-approve-content__approval-asset-title"
         >
           this collection
         </span>
-
+        
          without further notice.
-
+         
       </span>
     </div>
     <div
@@ -658,17 +625,6 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
           >
             Transaction fee
           </div>
-          <div
-            class="mm-box mm-box--width-1/6"
-          >
-            <a
-              class="button btn-link confirm-approve-content__small-blue-text"
-              role="button"
-              tabindex="0"
-            >
-              Edit
-            </a>
-          </div>
         </div>
         <div
           class="confirm-approve-content__card-content"
@@ -698,7 +654,7 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
           </div>
         </div>
         <div
-          class="box box--margin-bottom-4 box--flex-direction-row"
+          class="mm-box mm-box--margin-bottom-4"
         >
           <div
             class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
