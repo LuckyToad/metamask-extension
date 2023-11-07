@@ -3225,7 +3225,6 @@ export default class MetamaskController extends EventEmitter {
         await this.assetsContractController.getTokenStandardAndDetails(address);
       return details?.symbol;
     } catch (e) {
-      log.warning(`Failed to get token balance. Error: ${e}`);
       return null;
     }
   }
