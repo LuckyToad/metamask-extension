@@ -121,13 +121,13 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="box box--margin-right-4 box--margin-left-4 box--flex-direction-row"
-      >
         <div
-          class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
-        />
+          class="box box--margin-bottom-4 box--flex-direction-row"
+        >
+          <div
+            class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
+          />
+        </div>
       </div>
       <div
         class="confirm-approve-content__card--no-border"
@@ -313,13 +313,13 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="box box--margin-right-4 box--margin-left-4 box--flex-direction-row"
-      >
         <div
-          class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
-        />
+          class="box box--margin-bottom-4 box--flex-direction-row"
+        >
+          <div
+            class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
+          />
+        </div>
       </div>
       <div
         class="confirm-approve-content__card--no-border"
@@ -505,13 +505,13 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="box box--margin-right-4 box--margin-left-4 box--flex-direction-row"
-      >
         <div
-          class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
-        />
+          class="box box--margin-bottom-4 box--flex-direction-row"
+        >
+          <div
+            class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
+          />
+        </div>
       </div>
       <div
         class="confirm-approve-content__card--no-border"
@@ -697,13 +697,13 @@ exports[`ConfirmApproveContent Component should render Confirm approve page corr
             </div>
           </div>
         </div>
-      </div>
-      <div
-        class="box box--margin-right-4 box--margin-left-4 box--flex-direction-row"
-      >
         <div
-          class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
-        />
+          class="box box--margin-bottom-4 box--flex-direction-row"
+        >
+          <div
+            class="mm-box mm-box--display-flex mm-box--flex-direction-column mm-box--justify-content-center mm-box--align-items-center"
+          />
+        </div>
       </div>
       <div
         class="confirm-approve-content__card--no-border"

@@ -7,7 +7,7 @@ import { useTransactionModalContext } from '../../../contexts/transaction-modal'
 import { BUTTON_VARIANT, Button, IconName } from '../../component-library';
 import { IconColor, Size } from '../../../helpers/constants/design-system';
 
-export default function EditGasFeeIcon({ userAcknowledgedGasMissing }) {
+export default function EditGasFeeIcon({ userAcknowledgedGasMissing = false }) {
   const { hasSimulationError, estimateUsed, supportsEIP1559 } =
     useGasFeeContext();
   const { updateTransactionEventFragment } = useTransactionEventFragment();

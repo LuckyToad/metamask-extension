@@ -377,7 +377,7 @@ describe('Send ETH from dapp using advanced gas controls', function () {
         await driver.clickElement(
           '[data-testid="transaction-list-item-primary-currency"]',
         );
-        await txValue.click();
+
         await driver.waitForSelector({
           xpath: "//div[contains(text(), 'Base fee')]",
         });

@@ -535,7 +535,7 @@ export default function TokenAllowance({
           />
         </Box>
       )}
-      <Box marginTop={4} marginRight={4} marginLeft={4}>
+      <Box marginRight={4} marginLeft={4}>
         <FeeDetailsComponent
           supportsEIP1559={supportsEIP1559}
           useCurrencyRateCheck={useCurrencyRateCheck}

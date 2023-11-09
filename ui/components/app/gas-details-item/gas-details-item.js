@@ -106,7 +106,9 @@ const GasDetailsItem = ({
         Object.keys(draftTransaction).length === 0 && (
           <div className="gas-details-item__currency-container">
             <LoadingHeartBeat estimateUsed={estimateUsed} />
-            <EditGasFeeIcon />
+            <EditGasFeeIcon
+              userAcknowledgedGasMissing={userAcknowledgedGasMissing}
+            />
             <UserPreferencedCurrencyDisplay
               type={SECONDARY}
               value={getTransactionFeeTotal}
