@@ -607,12 +607,12 @@ exports[`SendPage render renders correctly 1`] = `
                       >
                         <div
                           class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-                          title="0 ETH"
+                          title="<0.000001 ETH"
                         >
                           <span
                             class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-default"
                           >
-                            0
+                            &lt;0.000001
                           </span>
                           <span
                             class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-default"
@@ -640,12 +640,12 @@ exports[`SendPage render renders correctly 1`] = `
                     >
                       <div
                         class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-                        title="0 ETH"
+                        title="<0.000001 ETH"
                       >
                         <span
                           class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-default"
                         >
-                          0
+                          &lt;0.000001
                         </span>
                         <span
                           class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-default"
@@ -692,32 +692,57 @@ exports[`SendPage render renders correctly 1`] = `
                       class=""
                     >
                       <div
-                        class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-                        title="<0.000001 ETH"
+                        class="identicon"
+                        style="height: 28px; width: 28px; border-radius: 14px;"
                       >
                         <div
                           style="border-radius: 50px; overflow: hidden; padding: 0px; margin: 0px; width: 28px; height: 28px; display: inline-block; background: rgb(249, 100, 1);"
                         >
-                          &lt;0.000001
-                        </span>
-                        <span
-                          class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-default"
-                        >
-                          ETH
-                        </span>
+                          <svg
+                            height="28"
+                            width="28"
+                            x="0"
+                            y="0"
+                          >
+                            <rect
+                              fill="#C81432"
+                              height="28"
+                              transform="translate(-0.510690249475231 -2.7159619403490534) rotate(331.7 14 14)"
+                              width="28"
+                              x="0"
+                              y="0"
+                            />
+                            <rect
+                              fill="#187AF2"
+                              height="28"
+                              transform="translate(-11.127931122273568 5.54021528290869) rotate(160.5 14 14)"
+                              width="28"
+                              x="0"
+                              y="0"
+                            />
+                            <rect
+                              fill="#FB183E"
+                              height="28"
+                              transform="translate(25.084575445435807 -2.611206239472919) rotate(517.6 14 14)"
+                              width="28"
+                              x="0"
+                              y="0"
+                            />
+                          </svg>
+                        </div>
                       </div>
                     </div>
                     <div
-                      class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-                      title="<0.000001 ETH"
+                      class="box send__select-recipient-wrapper__group-item__content box--flex-direction-row"
+                      data-testid="recipient"
                     >
                       <p
                         class="mm-box mm-text mm-text--body-xs mm-box--color-text-alternative"
                       >
-                        &lt;0.000001
-                      </span>
-                      <span
-                        class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-default"
+                        Address Book Account 1
+                      </p>
+                      <p
+                        class="mm-box mm-text send__select-recipient-wrapper__group-item__subtitle mm-text--body-md mm-box--color-text-alternative"
                       >
                         0xc42e...8813
                       </p>
@@ -972,6 +997,40 @@ exports[`SendPage render renders correctly 1`] = `
                   </div>
                 </div>
               </div>
+              <button
+                aria-label="Switch input currency"
+                class="mm-box mm-button-icon mm-button-icon--size-sm mm-box--display-inline-flex mm-box--justify-content-center mm-box--align-items-center mm-box--color-primary-default mm-box--background-color-transparent mm-box--rounded-lg"
+              >
+                <span
+                  class="mm-box mm-icon mm-icon--size-sm mm-box--display-inline-block mm-box--color-inherit"
+                  style="mask-image: url('./images/icons/swap-vertical.svg');"
+                />
+              </button>
+            </div>
+          </div>
+          <div
+            class="mm-box mm-box--display-flex"
+          >
+            <p
+              class="mm-box mm-text mm-text--body-md mm-box--margin-right-1 mm-box--color-text-alternative"
+            >
+              Balance
+              :
+            </p>
+            <div
+              class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
+              title="<0.000001 ETH"
+            >
+              <span
+                class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-alternative"
+              >
+                &lt;0.000001
+              </span>
+              <span
+                class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-alternative"
+              >
+                ETH
+              </span>
             </div>
           </div>
         </div>
@@ -987,94 +1046,8 @@ exports[`SendPage render renders correctly 1`] = `
         <button
           class="mm-box mm-text mm-button-base mm-button-base--size-lg mm-button-base--block mm-button-primary mm-text--body-md-medium mm-box--padding-0 mm-box--padding-right-4 mm-box--padding-left-4 mm-box--display-inline-flex mm-box--justify-content-center mm-box--align-items-center mm-box--color-primary-inverse mm-box--background-color-primary-default mm-box--rounded-pill"
         >
-          <div
-            class="mm-box asset-picker mm-box--padding-2 mm-box--display-flex mm-box--align-items-center mm-box--background-color-background-alternative mm-box--rounded-pill"
-          >
-            <div
-              class="mm-box mm-text mm-avatar-base mm-avatar-base--size-xs mm-avatar-token mm-text--body-xs mm-text--text-transform-uppercase mm-box--display-flex mm-box--justify-content-center mm-box--align-items-center mm-box--color-text-default mm-box--background-color-background-alternative mm-box--rounded-full mm-box--border-color-transparent box--border-style-solid box--border-width-1"
-            >
-              <img
-                alt="undefined logo"
-                class="mm-avatar-token__token-image"
-                src="./images/eth_logo.png"
-              />
-            </div>
-            <p
-              class="mm-box mm-text mm-text--body-xs mm-box--margin-right-auto mm-box--margin-left-auto mm-box--color-text-default"
-            >
-              ETH
-            </p>
-            <span
-              class="mm-box mm-icon mm-icon--size-xs mm-box--display-inline-block mm-box--color-inherit"
-              style="mask-image: url('./images/icons/arrow-down.svg');"
-            />
-          </div>
-          <div
-            class="unit-input asset-picker-amount__input"
-          >
-            <div
-              class="unit-input__inputs"
-            >
-              <div
-                class="unit-input__input-container"
-              >
-                <input
-                  class="unit-input__input"
-                  data-testid="currency-input"
-                  dir="ltr"
-                  placeholder="0"
-                  style="width: 1.5ch;"
-                  type="number"
-                  value="0"
-                />
-                <div
-                  class="unit-input__suffix"
-                >
-                  ETH
-                </div>
-              </div>
-              <div
-                class="currency-input__conversion-component"
-              >
-                No conversion rate available
-              </div>
-            </div>
-            <button
-              aria-label="Switch input currency"
-              class="mm-box mm-button-icon mm-button-icon--size-sm mm-box--display-inline-flex mm-box--justify-content-center mm-box--align-items-center mm-box--color-primary-default mm-box--background-color-transparent mm-box--rounded-lg"
-            >
-              <span
-                class="mm-box mm-icon mm-icon--size-sm mm-box--display-inline-block mm-box--color-inherit"
-                style="mask-image: url('./images/icons/swap-vertical.svg');"
-              />
-            </button>
-          </div>
-        </div>
-        <div
-          class="mm-box mm-box--display-flex"
-        >
-          <p
-            class="mm-box mm-text mm-text--body-md mm-box--margin-right-1 mm-box--color-text-alternative"
-          >
-            Balance
-            :
-          </p>
-          <div
-            class="mm-box currency-display-component mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-            title="<0.000001 ETH"
-          >
-            <span
-              class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-alternative"
-            >
-              &lt;0.000001
-            </span>
-            <span
-              class="mm-box mm-text currency-display-component__suffix mm-text--inherit mm-box--margin-inline-start-1 mm-box--color-text-alternative"
-            >
-              ETH
-            </span>
-          </div>
-        </div>
+          Confirm
+        </button>
       </div>
     </div>
   </div>
