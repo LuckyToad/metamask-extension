@@ -285,6 +285,7 @@ describe('MetaMask @no-mmi', function () {
       if (process.env.MULTICHAIN) {
         return;
       }
+      await driver.clickElement('[data-testid="home__asset-tab"]');
       const [, tkn] = await driver.findElements(
         '[data-testid="multichain-token-list-button"]',
       );
