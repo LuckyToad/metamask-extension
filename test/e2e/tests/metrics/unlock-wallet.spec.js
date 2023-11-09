@@ -7,19 +7,19 @@ const {
 } = require('../../helpers');
 const FixtureBuilder = require('../../fixture-builder');
 
-describe('Unlock wallet', function () {
-  async function mockSegment(mockServer) {
-    return await mockServer
-      .forPost('https://api.segment.io/v1/batch')
-      .withJsonBodyIncluding({ batch: [{ type: 'page' }] })
-      .times(3)
-      .thenCallback(() => {
-        return {
-          statusCode: 200,
-        };
-      });
-  }
+async function mockSegment(mockServer) {
+  return await mockServer
+    .forPost('https://api.segment.io/v1/batch')
+    .withJsonBodyIncluding({ batch: [{ type: 'page' }] })
+    .times(1)
+    .thenCallback(() => {
+      return {
+        statusCode: 200,
+      };
+    });
+}
 
+describe('Unlock wallet', function () {
   it('should send first three Page metric events upon fullscreen page load', async function () {
     await withFixtures(
       {

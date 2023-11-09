@@ -28,6 +28,7 @@ import {
   ENVIRONMENT_TYPE_FULLSCREEN,
   EXTENSION_MESSAGES,
   PLATFORM_FIREFOX,
+  MESSAGE_TYPE,
   ///: BEGIN:ONLY_INCLUDE_IN(keyring-snaps)
   SNAP_MANAGE_ACCOUNTS_CONFIRMATION_TYPES,
   ///: END:ONLY_INCLUDE_IN
@@ -103,6 +104,7 @@ const openMetamaskTabsIDs = {};
 const requestAccountTabIds = {};
 let controller;
 let versionedData;
+let visitedSiteData = {};
 
 if (inTest || process.env.METAMASK_DEBUG) {
   global.stateHooks.metamaskGetState = localStore.get.bind(localStore);
@@ -660,14 +662,88 @@ export function setupController(
         connectionStream: portStream,
       });
     } else {
+      // this is triggered when a new tab is opened, or origin(url) is changed
       if (remotePort.sender && remotePort.sender.tab && remotePort.sender.url) {
         const tabId = remotePort.sender.tab.id;
         const url = new URL(remotePort.sender.url);
         const { origin } = url;
 
+        const connectSitePermissions =
+          controller.permissionController.state.subjects[origin];
+        // when the dapp is not connected, connectSitePermissions is undefined
+        const isConnectedToDapp = connectSitePermissions !== undefined;
+
+
+
+        // If account is connected to dapp, sent metrics when refreshing, navigating and opening a tab
+        // visitedSiteData[origin] === undefined represents refresh a connected site
+        // visitedSiteData[origin].hasSentDappEvents represent opens the site in a new tab
+        if (
+          isConnectedToDapp &&
+          (visitedSiteData[origin] === undefined ||
+            visitedSiteData[origin].hasSentDappEvents)
+        ) {
+          const numberOfTotalAccounts = Object.keys(
+            controller.preferencesController.store.getState().identities,
+          ).length;
+          const numberOfConnectedAccounts =
+            connectSitePermissions.permissions.eth_accounts.caveats[0].value
+              .length;
+          controller.metaMetricsController.trackEvent({
+            event: MetaMetricsEventName.DappViewed,
+            category: MetaMetricsEventCategory.InpageProvider,
+            referrer: {
+              url: origin,
+            },
+            properties: {
+              isFirstVisit: false,
+              number_of_accounts: numberOfTotalAccounts,
+              number_of_accounts_connected: numberOfConnectedAccounts,
+            },
+          });
+          visitedSiteData = {
+            ...visitedSiteData,
+            [origin]: { hasSentDappEvents: true },
+          };
+        }
+
         remotePort.onMessage.addListener((msg) => {
-          if (msg.data && msg.data.method === 'eth_requestAccounts') {
-            requestAccountTabIds[origin] = tabId;
+          if (msg.data) {
+            const currentSiteData = { tabId, origin };
+            if (msg.data.method === MESSAGE_TYPE.ETH_REQUEST_ACCOUNTS) {
+              requestAccountTabIds[origin] = tabId;
+            }
+
+            // Also using msg.data.method to identify the type of site is a dapp
+            // if (
+            //   !visitedSiteData.includes(currentSiteData.origin) &&
+            //   (msg.data.method !== MESSAGE_TYPE.SEND_METADATA ||
+            //     msg.data.method !== MESSAGE_TYPE.GET_PROVIDER_STATE)
+            // ) {
+            //   const numberOfTotalAccounts = Object.keys(
+            //     controller.preferencesController.store.getState().identities,
+            //   ).length;
+            //   const connectSitePermissions =
+            //     controller.permissionController.state.subjects[origin];
+            //   const numberOfConnectedAccounts = connectSitePermissions
+            //     ? connectSitePermissions.permissions.eth_accounts.caveats[0]
+            //         .value.length
+            //     : 0;
+            //
+            //   // controller.metaMetricsController.trackEvent({
+            //   //   event: MetaMetricsEventName.DappViewed,
+            //   //   category: MetaMetricsEventCategory.InpageProvider,
+            //   //   referrer: {
+            //   //     url: origin,
+            //   //   },
+            //   //   properties: {
+            //   //     number_of_accounts: numberOfTotalAccounts,
+            //   //     number_of_accounts_connected: numberOfConnectedAccounts,
+            //   //   },
+            //   // });
+            //
+            //   visitedSiteData.push(origin);
+            // }
           }
         });
       }
