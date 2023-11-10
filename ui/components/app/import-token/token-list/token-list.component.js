@@ -81,7 +81,9 @@ export default class TokenList extends Component {
                       <Box>
                         <Checkbox
                           isChecked={
-                            selectedTokens[address] || tokenAlreadySelected
+                            selectedTokens[address] ||
+                            tokenAlreadySelected ||
+                            false
                           }
                           marginRight={3}
                           onClick={onClick}
