@@ -3576,6 +3576,19 @@ export function removePermissionsFor(
   };
 }
 
+/**
+ * Updates the pinned accounts list
+ *
+ * @param pinnedAccountList
+ */
+export function updateAccountsList(
+  pinnedAccountList: [],
+): ThunkAction<void, MetaMaskReduxState, unknown, AnyAction> {
+  return async (dispatch: MetaMaskReduxDispatch) => {
+    await submitRequestToBackground('updateAccountsList', [pinnedAccountList])
+  };
+}
+
 ///: BEGIN:ONLY_INCLUDE_IN(snaps)
 /**
  * Updates the caveat value for the specified origin, permission and caveat type.
