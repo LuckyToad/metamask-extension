@@ -1203,6 +1203,10 @@ export function getSortedAnnouncementsToShow(state) {
   return announcementsSortedByDate;
 }
 
+export function getPinnedAccountsList(state) {
+  return state.metamask.pinnedAccountList;
+}
+
 export function getShowRecoveryPhraseReminder(state) {
   const {
     recoveryPhraseReminderLastShown,

@@ -5255,7 +5255,7 @@ export default class MetamaskController extends EventEmitter {
 
   updateAccountsList = (pinnedAccountList) => {
     try {
-      this.networkOrderController.updateNetworksList(pinnedAccountList);
+      this.accountOrderController.updateAccountsList(pinnedAccountList);
     } catch (err) {
       log.error(err.message);
       throw err;
