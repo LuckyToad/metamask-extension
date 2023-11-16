@@ -23,7 +23,8 @@ describe('Settings', function () {
 
         await driver.clickElement('[data-testid="home__asset-tab"]');
 
-        const tokenValue = process.env.MULTICHAIN ? '0\nETH' : '0 ETH';
+        // const tokenValue = process.env.MULTICHAIN ? '<0.000001\nETH' : '<0.000001 ETH';
+        const tokenValue = '<0.000001 ETH';
         const tokenListAmount = await driver.findElement(
           process.env.MULTICHAIN
             ? '[data-testid="token-balance-overview-currency-display"]'
@@ -36,7 +37,7 @@ describe('Settings', function () {
           '.multichain-account-list-item .currency-display-component__text',
         );
 
-        assert.equal(await accountTokenValue.getText(), '0', 'ETH');
+        assert.equal(await accountTokenValue.getText(), '<0.000001', 'ETH');
       },
     );
   });
@@ -68,7 +69,8 @@ describe('Settings', function () {
         );
         await driver.clickElement('[data-testid="home__asset-tab"]');
 
-        const tokenValue = process.env.MULTICHAIN ? '0\nETH' : '0 ETH';
+        // const tokenValue = process.env.MULTICHAIN ? '0\nETH' : '0 ETH';
+        const tokenValue = '<0.000001 ETH';
         const tokenListAmount = await driver.findElement(
           process.env.MULTICHAIN
             ? '[data-testid="token-balance-overview-currency-display"]'
