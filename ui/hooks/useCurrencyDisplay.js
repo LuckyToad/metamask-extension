@@ -67,7 +67,7 @@ export function useCurrencyDisplay(
         .toBase(10)
         .toString();
 
-      if (ethDisplayValue === '0' && Number(inputValue) !== 0) {
+      if (ethDisplayValue === '0' && inputValue && Number(inputValue) !== 0) {
         ethDisplayValue = '<0.000001';
       }
 

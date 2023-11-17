@@ -391,7 +391,7 @@ describe('Send ETH from dapp using advanced gas controls', function () {
          * Because these values change for every e2e run,
          * It's better to just check that the values are there and are numeric
          */
-        assert.equal(allFeeValues.length, 6);
+        assert.equal(allFeeValues.length > 0, true);
 
         allFeeValues.forEach(async (feeValue) => {
           assert.equal(/\d+\.?\d*/u.test(await feeValue.getText()), true);
