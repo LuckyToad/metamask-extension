@@ -3584,8 +3584,8 @@ export function removePermissionsFor(
 export function updateAccountsList(
   pinnedAccountList: [],
 ): ThunkAction<void, MetaMaskReduxState, unknown, AnyAction> {
-  return async (dispatch: MetaMaskReduxDispatch) => {
-    await submitRequestToBackground('updateAccountsList', [pinnedAccountList])
+  return async () => {
+    await submitRequestToBackground('updateAccountsList', [pinnedAccountList]);
   };
 }
 
