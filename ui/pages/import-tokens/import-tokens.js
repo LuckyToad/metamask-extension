@@ -384,9 +384,9 @@ const ImportTokens = () => {
   const isConfirming = mode === 'confirm';
 
   return (
-    <div className="page-container">
-      <div className="import-tokens-page__header">
-        <div className="import-tokens-page__title">
+    <Box className="page-container">
+      <Box className="import-tokens-page__header">
+        <Box className="import-tokens-page__title">
           <Text
             as="header"
             variant={TextVariant.headingSm}
@@ -394,7 +394,7 @@ const ImportTokens = () => {
           >
             {t('importTokensCamelCase')}
           </Text>
-        </div>
+        </Box>
         <ButtonIcon
           iconName={IconName.Close}
           ariaLabel={t('close')}
@@ -414,8 +414,8 @@ const ImportTokens = () => {
           size={ButtonIconSize.Sm}
           marginLeft="auto"
         />
-      </div>
-      <div className="page-container__content">
+      </Box>
+      <Box className="page-container__content">
         {isConfirming ? (
           <Text as="header" variant={TextVariant.headingSm}>
             {/* confirmation START */}
@@ -623,9 +623,9 @@ const ImportTokens = () => {
             </Tab>
           </Tabs>
         )}
-      </div>
+      </Box>
       {isConfirming ? (
-        <div className="import-tokens-page__footer">
+        <Box className="import-tokens-page__footer">
           <ButtonSecondary
             size={Size.LG}
             onClick={() => {
@@ -648,9 +648,9 @@ const ImportTokens = () => {
           >
             {t('import')}
           </ButtonPrimary>
-        </div>
+        </Box>
       ) : (
-        <div className="import-tokens-page__footer">
+        <Box className="import-tokens-page__footer">
           <ButtonPrimary
             onClick={() => handleNext()}
             size={Size.LG}
@@ -659,9 +659,9 @@ const ImportTokens = () => {
           >
             {t('next')}
           </ButtonPrimary>
-        </div>
+        </Box>
       )}
-    </div>
+    </Box>
   );
 };
 

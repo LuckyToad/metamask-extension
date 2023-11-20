@@ -49,8 +49,8 @@ export default class TokenList extends Component {
     return results.length === 0 ? (
       <TokenListPlaceholder />
     ) : (
-      <div className="token-list">
-        <div className="token-list__tokens-container">
+      <Box className="token-list">
+        <Box className="token-list__tokens-container">
           {Array(12)
             .fill(undefined)
             .map((_, i) => {
@@ -131,8 +131,8 @@ export default class TokenList extends Component {
                 )
               );
             })}
-        </div>
-      </div>
+        </Box>
+      </Box>
     );
   }
 }
