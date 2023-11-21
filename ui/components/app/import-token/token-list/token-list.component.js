@@ -32,18 +32,17 @@ export default class TokenList extends Component {
     onToggleToken: PropTypes.func,
     currentNetwork: PropTypes.object,
     testNetworkBackgroundColor: PropTypes.object,
-    theme: PropTypes.string,
   };
 
   render() {
     const {
       results = [],
       selectedTokens = {},
+
       onToggleToken,
       tokens = [],
       currentNetwork,
       testNetworkBackgroundColor,
-      theme = undefined,
     } = this.props;
 
     return results.length === 0 ? (
@@ -69,26 +68,23 @@ export default class TokenList extends Component {
                     display={Display.Flex}
                     className={classnames('token-list__token_component', {
                       'token-list__token_component--selected':
-                        selectedTokens[address] && theme === 'light',
-                      'token-list__token_component--selected-dark':
-                        selectedTokens[address] && theme === 'dark',
+                        selectedTokens[address],
                       'token-list__token_component--disabled':
                         tokenAlreadyAdded,
                     })}
                     onClick={onClick}
                   >
                     <Box display={Display.Flex} alignItems={AlignItems.center}>
-                      <Box>
-                        <Checkbox
-                          isChecked={
-                            selectedTokens[address] ||
-                            tokenAlreadySelected ||
-                            false
-                          }
-                          marginRight={3}
-                          onClick={onClick}
-                        />
-                      </Box>
+                      <Checkbox
+                        isChecked={
+                          selectedTokens[address] ||
+                          tokenAlreadySelected ||
+                          false
+                        }
+                        marginRight={3}
+                        onClick={onClick}
+                      />
+
                       <Box>
                         <BadgeWrapper
                           badge={

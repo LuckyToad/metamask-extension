@@ -40,7 +40,6 @@ import {
   getCurrentChainId,
   getRpcPrefsForCurrentProvider,
   getSelectedNetworkClientId,
-  getTheme,
 } from '../../selectors';
 import {
   Text,
@@ -111,7 +110,6 @@ const ImportTokens = () => {
   const tokens = useSelector((state) => state.metamask.tokens);
   const pendingTokens = useSelector(getPendingTokens);
   const chainId = useSelector(getCurrentChainId);
-  const theme = useSelector((state) => getTheme(state));
   const blockExplorerTokenLink = getTokenTrackerLink(
     customAddress,
     chainId,
@@ -342,7 +340,6 @@ const ImportTokens = () => {
               className="import-tokens-modal__nft-address-error-link"
               onClick={() => {
                 dispatch(showImportNftsModal({ tokenAddress: address }));
-                // nClose();
                 history.push(mostRecentOverviewPage);
               }}
               color={TextColor.primaryDefault}
@@ -384,7 +381,7 @@ const ImportTokens = () => {
   const isConfirming = mode === 'confirm';
 
   return (
-    <Box className="page-container">
+    <Box className="page-container scrollable">
       <Box className="import-tokens-page__header">
         <Box className="import-tokens-page__title">
           <Text
@@ -474,7 +471,6 @@ const ImportTokens = () => {
                       results={searchResults}
                       selectedTokens={selectedTokens}
                       onToggleToken={(token) => handleToggleToken(token)}
-                      theme={theme}
                     />
                   </Box>
                 </Box>

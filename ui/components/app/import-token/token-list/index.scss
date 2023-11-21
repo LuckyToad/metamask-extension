@@ -14,11 +14,7 @@
     cursor: pointer;
 
     &--selected {
-      background-color: rgb(230, 242, 250);
-    }
-
-    &--selected-dark {
-      background-color: rgb(99, 113, 122);
+      background-color: var(--color-primary-muted);
     }
 
     &--disabled {
