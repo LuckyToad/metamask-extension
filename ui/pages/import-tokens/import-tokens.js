@@ -403,7 +403,6 @@ const ImportTokens = () => {
               dispatch(
                 showModal({
                   name: 'IMPORT_TOKEN_EXIT_MODAL',
-                  history,
                 }),
               );
             }
