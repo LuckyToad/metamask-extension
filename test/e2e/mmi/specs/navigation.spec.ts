@@ -71,8 +71,9 @@ test.describe('MMI Navigation', () => {
       'Portfolio',
       portfolio,
       'button',
+      2,
     );
-    await checkLinkURL(context, mainPage.page, 'Swap', swap, 'button', 2);
+    await checkLinkURL(context, mainPage.page, 'Swap', swap, 'button');
 
     // Check NFT and Activity tab links
     await mainPage.activityTab.click();
@@ -111,6 +112,7 @@ test.describe('MMI Navigation', () => {
       'Portfolio Dashboard',
       portfolio,
       'button',
+      2,
     );
 
     // Check settings links

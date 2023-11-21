@@ -32,7 +32,7 @@ export async function checkLinkURL(
       const regex = new RegExp(`.*${escapeRegExp(URLlink)}.*`, 'iu');
       try {
         if (retry > 0) {
-          await expect(newPage).toHaveURL(regex, { timeout: 10000 });
+          await expect(newPage).toHaveURL(regex);
         } else {
           await expect.soft(newPage).toHaveURL(regex);
         }
