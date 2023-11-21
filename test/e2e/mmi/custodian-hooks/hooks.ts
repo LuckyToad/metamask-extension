@@ -198,7 +198,7 @@ export class CustodianTestClient implements ICustodianTestClient {
         );
         return id;
       } catch (e) {
-        console.error("🥲 Tx not found -> getEIP721TransactionStatusCreated");
+        console.error('🥲 Tx not found -> getEIP721TransactionStatusCreated');
       }
       retries += 1;
       if (retries < maxRetries) {
