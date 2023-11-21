@@ -14,22 +14,22 @@ exports[`Confirm Detail Row Component should match snapshot 1`] = `
       <div
         class="mm-box currency-display-component confirm-detail-row__primary mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
         ethlogoheight="18"
-        title="<0.000001"
+        title="0"
       >
         <span
           class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-default"
         >
-          &lt;0.000001
+          0
         </span>
       </div>
       <div
         class="mm-box currency-display-component confirm-detail-row__secondary mm-box--display-flex mm-box--flex-wrap-wrap mm-box--align-items-center"
-        title="<0.000001"
+        title="0"
       >
         <span
           class="mm-box mm-text currency-display-component__text mm-text--inherit mm-text--ellipsis mm-box--color-text-default"
         >
-          &lt;0.000001
+          0
         </span>
       </div>
     </div>
