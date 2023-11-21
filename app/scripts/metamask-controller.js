@@ -2769,6 +2769,10 @@ export default class MetamaskController extends EventEmitter {
         ),
       setTermsOfUseLastAgreed:
         appStateController.setTermsOfUseLastAgreed.bind(appStateController),
+      setSurveyLinkLastClickedOrClosed:
+        appStateController.setSurveyLinkLastClickedOrClosed.bind(
+          appStateController,
+        ),
       ///: BEGIN:ONLY_INCLUDE_IN(snaps)
       setSnapsInstallPrivacyWarningShownStatus:
         appStateController.setSnapsInstallPrivacyWarningShownStatus.bind(
