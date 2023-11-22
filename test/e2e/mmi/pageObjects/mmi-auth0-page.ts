@@ -17,9 +17,9 @@ export class Auth0Page {
     console.log('🔐 Login in portfolio');
     await this.goto();
     if (
-      (await this.page
-        .getByRole('heading', { name: /welcome back/iu })
-        .count()) === 0
+      await this.page
+        .getByRole('heading', { name: /create your account/iu })
+        .isVisible()
     ) {
       await this.page.getByText('Log in').click();
     }

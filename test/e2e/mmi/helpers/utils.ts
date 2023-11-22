@@ -15,41 +15,19 @@ export async function checkLinkURL(
   textToSearch: string,
   URLlink: string,
   role: 'link' | 'button' = 'link',
-  retry = 0,
 ) {
   function escapeRegExp(str: string): string {
     return str.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&');
   }
   const links = await page.getByRole(role, { name: textToSearch }).all();
   for (const link of links) {
-    let failures = 0;
-    let success = false;
-    do {
-      const pagePromise = context.waitForEvent('page');
-      await link.click();
-      const newPage = await pagePromise;
-      await newPage.waitForLoadState();
-      const regex = new RegExp(`.*${escapeRegExp(URLlink)}.*`, 'iu');
-      try {
-        if (retry > 0) {
-          await expect(newPage).toHaveURL(regex);
-        } else {
-          await expect.soft(newPage).toHaveURL(regex);
-        }
-        success = true;
-      } catch (e) {
-        failures += 1;
-        console.log(e);
-      } finally {
-        console.log(
-          `click in ${textToSearch} and opening page ${newPage.url()}`,
-        );
-        await newPage.close();
-      }
-    } while (!success && failures < retry);
-    if (retry > 0 && failures === retry) {
-      throw new Error(`Failed to validate URL after ${retry} attempts`);
-    }
+    const pagePromise = context.waitForEvent('page');
+    await link.click();
+    const newPage = await pagePromise;
+    const regex = new RegExp(`.*${escapeRegExp(URLlink)}.*`, 'iu');
+    await expect.soft(newPage).toHaveURL(regex);
+    console.log(`click in ${textToSearch} and opening page ${newPage.url()}`);
+    await newPage.close();
   }
 }
 
