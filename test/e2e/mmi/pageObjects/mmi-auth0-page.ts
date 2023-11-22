@@ -1,4 +1,6 @@
-import { type Page } from '@playwright/test';
+import { expect, type Page } from '@playwright/test';
+
+const portfolio = 'https://dev.metamask-institutional.io/portfolio';
 
 export class Auth0Page {
   readonly page: Page;
@@ -27,6 +29,6 @@ export class Auth0Page {
       .locator('#password')
       .fill(process.env.MMI_E2E_E2E_AUTH0_PASSWORD as string);
     await this.page.getByRole('button', { name: /continue/iu }).click();
-    await this.page.waitForLoadState();
+    await expect(this.page).toHaveURL(portfolio);
   }
 }
