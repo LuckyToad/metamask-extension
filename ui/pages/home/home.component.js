@@ -714,6 +714,7 @@ export default class Home extends PureComponent {
       onTabClick,
       forgottenPassword,
       history,
+      setSurveyLinkLastClickedOrClosed,
       ///: BEGIN:ONLY_INCLUDE_IN(build-main,build-beta,build-flask)
       connectedStatusPopoverHasBeenShown,
       isPopup,
@@ -727,7 +728,6 @@ export default class Home extends PureComponent {
       announcementsToShow,
       firstTimeFlowType,
       newNetworkAddedConfigurationId,
-      setSurveyLinkLastClickedOrClosed,
       showSurveyToast,
       ///: END:ONLY_INCLUDE_IN
       ///: BEGIN:ONLY_INCLUDE_IN(build-mmi)
