@@ -435,7 +435,7 @@ const ImportTokens = () => {
                       marginBottom={4}
                       className="banner"
                     >
-                      <Text>
+                      <Text variant={TextVariant.bodyMd} fontSize="16">
                         {t('enhancedTokenDetectionAlertMessage', [
                           networkName,
                           <ButtonLink

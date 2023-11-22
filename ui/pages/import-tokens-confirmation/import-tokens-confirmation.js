@@ -39,7 +39,7 @@ const ImportTokensConfirmation = () => {
           : t('likeToImportTokens')}
       </Text>
       <Box marginTop={12} className="scrollable">
-        <Box display={Display.Flex} className="tokens-container banner">
+        <Box display={Display.Flex} className="tokens-container">
           {Object.entries(pendingTokens).map(([address, token]) => {
             const { name, symbol, iconUrl } = token;
             return (
@@ -57,12 +57,12 @@ const ImportTokensConfirmation = () => {
                         backgroundColor={testNetworkBackgroundColor}
                       />
                     }
-                    marginRight={3}
+                    marginRight={4}
                     marginTop={1}
                   >
                     <AvatarToken name={symbol} src={iconUrl} showHalo />
                   </BadgeWrapper>
-                  <Box marginInlineStart={4}>
+                  <Box>
                     <Text
                       fontWeight={FontWeight.Medium}
                       variant={TextVariant.bodyMd}
@@ -78,7 +78,17 @@ const ImportTokensConfirmation = () => {
                   </Box>
                 </Box>
                 <Box alignItems={AlignItems.flexStart}>
-                  <TokenBalance token={token} />
+                  <TokenBalance
+                    textProps={{
+                      font: FontWeight.Medium,
+                      variant: TextVariant.bodyLgMedium,
+                    }}
+                    suffixProps={{
+                      font: FontWeight.Medium,
+                      variant: TextVariant.bodyLgMedium,
+                    }}
+                    token={token}
+                  />
                 </Box>
               </Box>
             );
