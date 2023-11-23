@@ -179,13 +179,19 @@
 
   &__new-tokens-imported-notification {
     margin-bottom: 4px;
-    margin-inline-start: 8px;
     padding: 8px;
+
+
 
     @include screen-sm-min {
       margin-bottom: 50px;
       margin-inline-end: 8px;
-      left: 70%;
+      margin-right: 40%;
+    }
+
+    @include screen-sm-max {
+      left: 5%;
+      right: 5% !important;
     }
 
     &-title,
@@ -197,7 +203,6 @@
       @include H3;
 
       margin-inline-end: 12px;
-      padding-top: 12px;
       color: var(--color-success-default);
     }
 
