@@ -737,11 +737,10 @@ export default class ConfirmTransactionBase extends Component {
 
     if (accountType === 'custody') {
       txData.custodyStatus = 'created';
+      txData.metadata = txData.metadata || {};
 
       if (isNoteToTraderSupported) {
-        txData.metadata = {
-          note: noteText,
-        };
+        txData.metadata.note = noteText;
       }
 
       txData.metadata.custodianPublishesTransaction =
