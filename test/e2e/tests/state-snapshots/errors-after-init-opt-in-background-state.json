@@ -1,4 +1,5 @@
 {
+  "AccountOrderController": "object",
   "AccountTracker": { "accounts": "object" },
   "AddressBookController": { "addressBook": "object" },
   "AlertController": {
@@ -43,14 +44,14 @@
   "CachedBalancesController": { "cachedBalances": "object" },
   "CronjobController": { "jobs": "object" },
   "CurrencyController": {
-    "currentCurrency": "usd",
     "currencyRates": {
       "ETH": {
         "conversionDate": "number",
         "conversionRate": 1700,
         "usdConversionRate": 1700
       }
-    }
+    },
+    "currentCurrency": "usd"
   },
   "DecryptMessageController": {
     "unapprovedDecryptMsgs": "object",
@@ -132,12 +133,12 @@
     "dismissSeedBackUpReminder": true,
     "disabledRpcMethodPreferences": { "eth_sign": false },
     "useMultiAccountBalanceChecker": true,
-    "useRequestQueue": false,
     "useSafeChainsListValidation": "boolean",
     "useTokenDetection": false,
     "useNftDetection": false,
     "use4ByteResolution": true,
     "useCurrencyRateCheck": true,
+    "useRequestQueue": false,
     "openSeaEnabled": false,
     "securityAlertsEnabled": "boolean",
     "addSnapAccountEnabled": "boolean",
@@ -166,9 +167,7 @@
     "selectedAddress": "string"
   },
   "SelectedNetworkController": {
-    "domains": {
-      "metamask": "networkConfigurationId"
-    },
+    "domains": { "metamask": "networkConfigurationId" },
     "perDomainNetwork": "boolean"
   },
   "SignatureController": {
@@ -236,8 +235,8 @@
     "allDetectedTokens": {}
   },
   "TxController": {
-    "lastFetchedBlockNumbers": "object",
     "methodData": "object",
-    "transactions": "object"
+    "transactions": "object",
+    "lastFetchedBlockNumbers": "object"
   }
 }
